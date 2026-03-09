@@ -171,7 +171,7 @@ In the center of the flow-frame is a square 40x40mm cavity, which will most like
 2. Secondly, should you want to avoid using auto-generated supports, you can print the “Cell_V4_interior” and “Cell_V4_exterior_…” files. In this case, the “interior” part is a simple rectangular plate topping the cavity, which is printed beforehand and is inserted into the cell afterwards during the print, thereby functioning as a support for the following layers. Start by printing the “Cell_V4_interior” part. I would recommend printing the part twice to begin with, as the part is identical in both of the flow frames and is therefore needed twice. When slicing the “Cell_V4_exterior” part, add a print pause just before the first layer covering the cavity is to be printed (height around 12,9mm). Once the print pauses, simply insert the plate into the slot around the cavity. 
     
     
-    ![image.png](attachment:a5004e2b-e4cb-40ec-978a-572256bffdb7:image.png)
+    ![Test](attachment:a5004e2b-e4cb-40ec-978a-572256bffdb7:image.png)
     
     ![image.png](attachment:cde8bee5-4e18-4fa6-b95a-0ea0c751f0cb:image.png)
     
