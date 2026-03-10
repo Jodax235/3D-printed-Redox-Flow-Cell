@@ -1,4 +1,5 @@
 # 3D-printed open-source Redox-Flow-Cell
+![Rendering of the Cell](Rendering_cell.png)
 
 > **This is both a documentation of and a guide to a low-cost, fully 3D-printed redox-flow-cell that operates using charge-dependent color-changing electrolytes, demonstrating the general principle behind this future technology of energy storage. The cell serves as an open-source test carrier and is ideal for own experiments with the technology.**
 
