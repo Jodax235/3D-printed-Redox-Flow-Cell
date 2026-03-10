@@ -1,7 +1,9 @@
 # 3D-printed open-source Redox-Flow-Cell
-![Rendering of the Cell](Rendering_cell.png)
+<img width="3388" height="1356" alt="Cell_Rendering" src="https://github.com/user-attachments/assets/eb9af1ba-2c1d-42a4-b3aa-b1f0e1fa9ee9" />
+
 
 > **This is both a documentation of and a guide to a low-cost, fully 3D-printed redox-flow-cell that operates using charge-dependent color-changing electrolytes, demonstrating the general principle behind this future technology of energy storage. The cell serves as an open-source test carrier and is ideal for own experiments with the technology.**
+
 
 # 0. Disclaimers
 
@@ -19,6 +21,7 @@ This documentation describes the design, construction, and operation of a 3D-pri
 
 THE AUTHORS, CONTRIBUTORS, AND DISTRIBUTORS PROVIDE THIS DOCUMENTATION “AS IS,” WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR CONTRIBUTORS BE LIABLE FOR ANY CLAIM, DAMAGES, LIABILITY, OR OTHER LOSS ARISING FROM OR RELATED TO THE USE, MISUSE, OR INABILITY TO USE THE INFORMATION PROVIDED.
 
+
 # 1. Introduction & Epilogue
 
 We - a group of three high school students from Germany - originally started this project as part of the German youth science competition “jugend forscht” (”youth experiments”), where the project won the chemistry category in the regional competition in Brunswick and proceeded to score 4th place in the state competition of Lower Saxony.
@@ -35,20 +38,17 @@ In order to allow for such use scenarios and to better convey the principle of a
 In theory however, the cell does allow for the use of other electrolytes as well (see below for “Material selection and compatibility testing”).
 
 Mainly due to constraints in time, resources, and technical equipment, we never managed to complete the project to its full potential. Major starting points for future work would firstly be an improvement of the overall leak tightness of the system, especially in the joint between the cells and membrane. Although the cell has proven to work accordingly even under demanding conditions, the system’s leak tightness requires a very large clamping force, resulting in high material stress on the cell’s main structure and lowering the cell’s life expectancy. One suitable variable already identified are the rubber gaskets - replacing the commercial-grade parts currently in use with more suitable industrial-grade ones seems to be a promising starting point. 
-
 Secondly, the cell was only ever tested with one pair of electrolytes. A comparison between different electrolytes under accurately comparable conditions would be interesting to see. For the spectrum of electrolytes already or potentially compatible with the cell, see below. 
-
 Thirdly, an array of already pre-tested and well documented electric consumer ready to be used for the cell would facilitate both the educational and private experimental-capabilities of the cell.
-
 Fourthly, it could be tested whether the cell might work with other types of membranes, either without a loss in efficiency or at a cost. The membrane currently in use is a Nafion N-117 membrane, which is a semipermeable cation exchange membrane. Changing the type of membrane used might severely reduce cost, as the membrane is currently by far the most expensive single part of the entire cell, attributing to more than half of the total cost.
 
+
 # 2. A short Introduction into Redox-Flow-Cells
-
-![image.png](attachment:64868ee5-6306-4c2f-afb1-6c18a21036fb:image.png)
-
-![images.jpeg](attachment:e5ed0d87-4ff2-40cb-a88d-621d381d6334:images.jpeg)
+<img width="512" height="367" alt="Diagram_redox_cell" src="https://github.com/user-attachments/assets/800f5b41-03a8-4635-b6e0-2b2ce8987ce4" />
+<img width="315" height="160" alt="structure_redox_cell" src="https://github.com/user-attachments/assets/ad596343-998b-4fdd-b1bd-0d388315998a" />
 
 A redox flow battery consists of two electrolyte tanks and the electrochemical cell itself, which is divided into two half-cells by a semipermeable membrane. Using pumps, two electrolytes (or a single electrolyte in different oxidation states) are circulated along the membrane within separate flow circuits. According to the conventional direction of current, electrons flow from the cathode to the anode during the charging process. As a result, an electron deficiency develops at the cathode, which attracts negative charge carriers, while an electron surplus forms at the anode, attracting positive charge carriers. A supporting electrolyte (conducting salt), added in advance, is essential for enabling ionic conductivity. The ions contained in this electrolyte balance the charge difference by migrating from the positively charged side to the negatively charged side through the membrane. Driven by the applied voltage, the more positive electrolyte continuously releases electrons at the cathode and is therefore oxidized, while the more negative electrolyte accepts electrons at the anode and is consequently reduced. In this altered charge configuration, the supplied electrical energy is stored chemically within the electrolytes. If the flow direction of the pumps is reversed, the reverse reaction occurs and the cell is discharged. Because this reaction proceeds spontaneously, it does not require an external electrical input (apart from the energy needed to operate the pumps). Instead, electrical energy is released. During discharge, the previously oxidized electrolyte is reduced and the previously reduced electrolyte is oxidized, returning both to their original chemical states. However, when the electrolytes are dissolved in distilled water, unwanted side reactions with the solvent may occur during the reverse reaction, leading to the formation of hydrogen gas. As a consequence, the reaction cannot proceed completely, and the initially supplied energy cannot be fully recovered. Nevertheless, redox flow batteries represent an attractive option for energy storage, among other reasons because they can operate without ethically problematic charge carriers such as lithium.
+
 
 # 3. Complete list of parts, equipment, and tools required
 
@@ -139,6 +139,8 @@ Note: Please check for the correct translation of chemical names beforehand.
  
 
 # 4. Manufacturing the cell
+<img width="720" height="498" alt="cell_diagram" src="https://github.com/user-attachments/assets/17dec3b3-0618-4467-9576-2a5924e1b26b" />
+
 
 ## 3D printing:
 
@@ -169,19 +171,14 @@ The printing of the cell (also referred to as “flow-frame”) is vastly more c
 In the center of the flow-frame is a square 40x40mm cavity, which will most likely require the use of supports, as its top cover is relatively thick and therefore heavy. There are two options for printing the cell:
 
 1. Firstly, should you be confident in your printer’s auto-generated supports and don’t mind removing them, you can print the “Cell_V4_mono_…” files and use auto-generated supports for the centre cavity. In this case, make sure that none of the auto-generated supports reach into the inlet manifolds, as it’s pillars should provide enough support themselves, and foreign supports are nearly impossible to remove without damaging the thin base plate.
-2. Secondly, should you want to avoid using auto-generated supports, you can print the “Cell_V4_interior” and “Cell_V4_exterior_…” files. In this case, the “interior” part is a simple rectangular plate topping the cavity, which is printed beforehand and is inserted into the cell afterwards during the print, thereby functioning as a support for the following layers. Start by printing the “Cell_V4_interior” part. I would recommend printing the part twice to begin with, as the part is identical in both of the flow frames and is therefore needed twice. When slicing the “Cell_V4_exterior” part, add a print pause just before the first layer covering the cavity is to be printed (height around 12,9mm). Once the print pauses, simply insert the plate into the slot around the cavity. 
-    
-    
-    ![Test](attachment:a5004e2b-e4cb-40ec-978a-572256bffdb7:image.png)
-    
-    ![image.png](attachment:cde8bee5-4e18-4fa6-b95a-0ea0c751f0cb:image.png)
-    
-    Please note that the plate is not symmetric but requires a specific orientation because of two threaded holes, whose orientation needs to match the orientation of the holes in the rest of the print (see pictures below). It is important to make sure that the slab lies fully flat in the recess and does not stick out, as the extruder nozzle could otherwise catch the plate, or all following layers could potentially shift. If you have access to a suitable glue (e.g. superglue or glue made specifically for bonding 3D-prints), it is only beneficial to glue the plate in place, as it lowers both the risk of the plate shifting, as well as the risk of fluids leaking out of the chamber, should a layer fault occur on the first layer printed after the pause (either from the plate rising up or from the part having cooled down too much).
-    
-    ![Bildschirmfoto 2026-03-05 um 10.17.50.png](attachment:a7036536-0e6d-416c-8d02-a40b9b3ec91a:Bildschirmfoto_2026-03-05_um_10.17.50.png)
-    
-    ![Bildschirmfoto 2026-03-05 um 10.17.31.png](attachment:c798c5de-4a17-4de7-8e4f-10f76980d2b6:Bildschirmfoto_2026-03-05_um_10.17.31.png)
-    
+2. Secondly, should you want to avoid using auto-generated supports, you can print the “Cell_V4_interior” and “Cell_V4_exterior_…” files. In this case, the “interior” part is a simple rectangular plate topping the cavity, which is printed beforehand and is inserted into the cell afterwards during the print, thereby functioning as a support for the following layers. Start by printing the “Cell_V4_interior” part. I would recommend printing the part twice to begin with, as the part is identical in both of the flow frames and is therefore needed twice. When slicing the “Cell_V4_exterior” part, add a print pause just before the first layer covering the cavity is to be printed (height around 12,9mm). Once the print pauses, simply insert the plate into the slot around the cavity.
+   |Before|After|
+   | --- | --- |
+   |<img width="2062" height="1274" alt="printing_process_1" src="https://github.com/user-attachments/assets/0619b8b2-7ccc-434c-b80a-bec407f31754" />|<img width="2072" height="1299" alt="image" src="https://github.com/user-attachments/assets/64605c08-055d-48a5-a44a-bcb620f33635" />|
+Please note that the plate is not symmetric but requires a specific orientation because of two threaded holes, whose orientation needs to match the orientation of the holes in the rest of the print (see pictures below). It is important to make sure that the slab lies fully flat in the recess and does not stick out, as the extruder nozzle could otherwise catch the plate, or all following layers could potentially shift. If you have access to a suitable glue (e.g. superglue or glue made specifically for bonding 3D-prints), it is only beneficial to glue the plate in place, as it lowers both the risk of the plate shifting, as well as the risk of fluids leaking out of the chamber, should a layer fault occur on the first layer printed after the pause (either from the plate rising up or from the part having cooled down too much).
+|Correct Orientation|Wrong Orientation|
+| --- | --- |
+|<img width="2045" height="1199" alt="image" src="https://github.com/user-attachments/assets/dc0a2bcf-961b-41ed-aaa0-9af9d3b2c8dc" />|<img width="2035" height="1181" alt="image" src="https://github.com/user-attachments/assets/9434a73e-0fb8-4d82-8232-3953d5e7d2e2" />| 
 
 In both cases, there is an “…A” and “…B” file, which both need to be printed. The only difference between them lies in the letter marked on them - it is, however, strongly recommended to print both of them (and not one two times), as the instructions are vastly easier to follow when the flow-frames are clearly identifiable.
 
@@ -235,6 +232,7 @@ Generally speaking, longer tubes provide more flexibility and space when working
 
 Take one of the four shorter silicon tubes and place one of its ends on one of the pump's four outputs. Firmly slip the end over the cone-shaped output until it fits securely - the tube’s ends should sit roughly one centimeter down on the cone. If possible, use a zip tie to further secure the connection.
 Repeat the process with the three tubes remaining.
+
 
 # 5. Setup of the Cell
 
@@ -299,10 +297,9 @@ The graphite fleece is the only other part, except the electrolytes, that is sin
 7. Power on the multimeters (or other measuring devices) and select the range. For the voltmeter, V, and for the amperemeter, mA, should be sufficient.  
 
 A more easily understandable graphical representation of the entire circuit looks as follows:
-
-![Bildschirmfoto 2026-03-04 um 00.20.59.png](attachment:cf55abd4-7f84-4664-b538-bf28f3cc87b7:Bildschirmfoto_2026-03-04_um_00.20.59.png)
-
+<img width="842" height="595" alt="image" src="https://github.com/user-attachments/assets/1811d0c4-1d7d-4a02-9f64-0f0296acd474" />
 *Note that in the graphic, the two pump-heads appear as two separated devices to allow for a clearer depiction. In reality, both are part of the same device, share the same motor, and are therefore connected by the same power cables/terminals, not two separate ones.* 
+
 
 # 6. Operating the Cell
 
